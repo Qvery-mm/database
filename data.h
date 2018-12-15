@@ -4,6 +4,8 @@
 
 #ifndef DATABASE_ITEM_H
 #define DATABASE_ITEM_H
+
+
 #include <stdio.h>
 typedef struct
 {
@@ -13,6 +15,7 @@ typedef struct
 } item;
 
 void saveData(size_t n, item *p, const char *filename);
-void uploadData(size_t n, item *p, const char *filename);
+item *uploadData(size_t *length, const char *filename);
+int new_database(const char *filename);
 
 #endif //DATABASE_ITEM_H
