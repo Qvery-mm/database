@@ -36,9 +36,9 @@ void start_menu()
     if(strcmp(s, NEWFILE) == 0)
     {
         printf("enter new filename:\n");
-        char filename[20];
-        gets(filename);
-        int callback = new_database(filename);
+        data = malloc(0);
+        gets(s);
+        int callback = new_database(s);
         if(callback == 1) {
             printf("file already exists\n");
             system("PAUSE");
@@ -58,6 +58,26 @@ void start_menu()
         scanf("%20s", action);
         if(!strcmp(action, ESCAPE))
             break;
+
+        if(!strcmp(action, NEWLINE))
+        {
+            item *data1 = realloc(data, (length+1) * sizeof(item));
+            if(!data1)
+            {
+                printf("error");
+                return;
+            }
+            length++;
+            printf("Enter name:\n");
+            //gets(sample.name);
+            scanf("%s", data[length-1].name);
+            printf("Enter coast:\n");
+            scanf("%d", &data[length-1].coast);
+            printf("Enter count:\n");
+            scanf("%d", &data[length-1].count);
+
+
+        }
 
         system("CLS");
         printDatabase(length, data);

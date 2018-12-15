@@ -50,4 +50,6 @@ int new_database(const char *filename)
     fclose(fp);
     size_t n = 0;
     saveData(0, NULL, filename);
+    return 0;
 }
+
