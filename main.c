@@ -24,8 +24,9 @@ int main()
 //    for(size_t i = 0; i < length; i++)
 //        printf("%s %d %d\n", a[i].name, a[i].coast, a[i].count);
 
-
-
+//    char buf[255];
+//    gets(buf);
+//    printf("%s", buf);
 
     start_menu();
     return 0;

@@ -4,5 +4,8 @@
 
 #ifndef DATABASE_ALGO_H
 #define DATABASE_ALGO_H
-void swap(void * a, void * b, int len);
+
+#include <stdlib.h>
+
+void swap_items(void * a, void * b, size_t len);
 #endif //DATABASE_ALGO_H

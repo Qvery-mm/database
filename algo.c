@@ -10,7 +10,7 @@
  * @param len - sizeof(a)
  * @return none
  */
-void swap(void * a, void * b, int len)
+void swap_items(void * a, void * b, size_t len)
 {
     unsigned char * p = a, * q = b, tmp;
     for (int i = 0; i != len; ++i)

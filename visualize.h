@@ -11,4 +11,5 @@
 void printItem(item a);
 void printDatabase(int n, item *p);
 void start_menu();
+char *getStr();
 #endif //DATABASE_VISUALIZE_H
