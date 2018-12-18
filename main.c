@@ -3,30 +3,18 @@
 #include "data.h"
 #include <string.h>
 #include "visualize.h"
+#include <locale.h>
+#include "Windows.h"
 
 
 
 int main()
 {
-//    size_t N = 2;
-//    item a[N];
-//    strcpy(a[0].name, "abba");
-//    a[0].coast = 123;
-//    a[0].count = 314;
-//    strcpy(a[1].name, "python");
-//    a[1].coast = 100;
-//    a[1].count = 300;
-//
-//    saveData(N, a, "test.dat");
-//    item *a;
-//    size_t length = 1;
-//    a = uploadData(&length, "test.dat");
-//    for(size_t i = 0; i < length; i++)
-//        printf("%s %d %d\n", a[i].name, a[i].coast, a[i].count);
-
-//    char buf[255];
-//    gets(buf);
-//    printf("%s", buf);
+    //setlocale(LC_ALL, "Russian");
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
+    system("chcp 65001");
+    system("CLS");
 
     start_menu();
     return 0;

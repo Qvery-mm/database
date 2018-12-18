@@ -12,13 +12,11 @@ item *uploadData(size_t *length, const char* filename)
 
     if(fread(length, sizeof(size_t), 1, fp) == 0)
     {
-        printf("Not found");
         return NULL;
     }
     item *p = malloc(*length * sizeof(item));
     if(fread(p, sizeof(item), *length, fp) == 0)
     {
-        printf("Not found");
         return NULL;
     }
     fclose(fp);
@@ -53,6 +51,14 @@ int new_database(const char *filename)
     size_t n = 0;
     saveData(0, NULL, filename);
     return 0;
+}
+
+item **data_to_pointers(size_t length, item *data, item **Pdata)
+{
+    Pdata = realloc(Pdata, length * sizeof(*data));
+    for(int i = 0; i < length; i++)
+        Pdata[i] = &data[i];
+    return Pdata;
 }
 
 item *erase_item(size_t *length, item *data, size_t id, const char *filename)
