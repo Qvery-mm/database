@@ -4,10 +4,13 @@
 
 #include "data.h"
 #include <stdio.h>
+#include <locale.h>
 
 #ifndef DATABASE_VISUALIZE_H
 #define DATABASE_VISUALIZE_H
-void clrscr();
-void printItem(item a);
-void printDatabase(int n, item *p);
+
+//void printItem(item a);
+//void printDatabase(size_t n, item *p);
+void start_menu();
+
 #endif //DATABASE_VISUALIZE_H

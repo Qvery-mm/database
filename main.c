@@ -3,14 +3,19 @@
 #include "data.h"
 #include <string.h>
 #include "visualize.h"
+#include <locale.h>
+#include "Windows.h"
 
 
 
-int main() {
+int main()
+{
+    //setlocale(LC_ALL, "Russian");
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
+    system("chcp 65001");
+    system("CLS");
 
-    item a[2];
-    uploadData(2, a, "book.dat");
-    printDatabase(2, a);
-
+    start_menu();
     return 0;
 }
